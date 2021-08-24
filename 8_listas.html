@@ -1,0 +1,111 @@
+<!-- 
+    Las listas en HTML sirven para listar contenido. En funcion del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+
+     ul -> unordered list: Se utilizan cuando el orden de los elementos no importa (una lista de la compra por ejemplo).
+
+     ol -> ordered list: Se utilizan cuando el ordende los elementos si importa (un instructivo por ejemplo).
+
+         Cada elemento de la lista se representa cun la etiqueta "<li>", tanto en las ul como las ol
+      
+        Se pueden construir listas anidadas (listas con otras listas dentro). 
+        
+     dl -> definition list: Se utilizan para hacer una lista de definiciones (un diccionario por ejemplo) (estas no son muy utilizadas)
+     Cada elemento del una lista de definiciones (dl) lleva 2 etiquetas:
+        dt -> esta es para decir la palabra o concepto que vamos a definir
+        dd -> aquí va la definicion como tal.
+ -->
+<!-- 
+    atributos de las listas:
+
+    ol ->
+        tipe: Estilo de la numeración (1,A,a,I,i)
+        start: Inicio de las secuencia (numero desde el que inicia)
+    ul ->
+        type: Estilo de los items (disc, square, cicle)    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <H1>Listas</H1>
+    <section> 
+        <h2>lista desordenada (ul):</h2>
+        <!-- Esta es la semantica correcta de un menu -->
+        <nav>
+            <ul>
+                <li><a href="#post-1">Post 1</a></li>
+                <li><a href="#post-2">Post 2</a></li>
+                <li><a href="#post-3">Post 3</a></li>
+                <li><a href="#post-4">Post 4</a></li>
+                <li><a href="#post-5">Post 5</a></li>
+                <li><a href="#post-6">Post 6</a></li>
+            </ul>
+        </nav>
+
+        <ul>
+            <li>Pan</li> 
+            <li>Huevos</li>
+            <li>Leche</li>
+            <li>Azucar</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>lista ordenada (ol)</h2>
+        <h3>Orden de aprendizaje en el desarrollo web.</h3>
+        
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <Li>JavaScript</Li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>listas de definición</h2>
+        <h4>Lenguajes de desarrollo web</h4>
+        <dl>
+            <dt>HTLM</dt>
+            <dd>HyperText Markup Language: es un lenguaje de marcado que se utiliza para estructurar datos de una página web.</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascade Style Sheets: Es un lenguaje de diseña que se utiliza para dar diseño a HTML.</dd>
+
+            <dt>JavaScript</dt>
+            <dd>ES un lenguaje de programción que se utiliza para dar interactividad a la web.</dd>
+        </dl>
+
+    </section>
+
+    <section>
+        <h2>Listas anidadas</h2>
+
+        <ul>
+            <li>
+                lista de compra
+                <ul>
+                    <li>Pan</li> 
+                    <li>Huevos</li>
+                    <li>Leche</li>
+                    <li>Azucar</li>
+                </ul>
+            </li>
+            <li>
+                cosas por hacer
+                <ol>
+                    <li>Lavar auto</li>
+                    <li>Estudiar HTML</li>
+                    <li>Escribir ensallo</li>
+                </ol>
+            </li>
+            <li>mas listas</li>
+        </ul>
+
+    </section>
+</body>
+</html>

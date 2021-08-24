@@ -1,0 +1,75 @@
+<!-- 
+    La estructura básica de un formulario se compone de 4 elementos
+
+    form -> Es la etiqueta que engloba nuestro formulario
+    label -> Sirve para escribir el nombre del campo a rellenar
+    input -> Sirve para crear un campo que permitirá al usuario interactuar
+    button -> Crea un botón que permitirá enviar el formulario
+ -->
+ <!-- 
+     input type
+        -button -> Se comporta igual que un botón <button>
+        -submit -> Se utiliza para enviar el formulario
+
+        -date -> Se utiliza para para introducir una fecha
+        -datetime -> Obsoleto ( )
+        -deltatime-local -> fecha y hora, no funciona en firefox
+        -time -> Se utiliza para introducir una hora
+            TIP
+              Si necesitas en un formulario agregar fecha y hora:
+                ·se recomienda usar deltatime-local y time para seleccionar fecha y hora
+                -hidden -> Campo oculto, puede contener un valor pero no se mostrará
+        -month -> Se utiliza para introducir un mes 
+
+        -color -> Se utiliza para especificar un color
+        -email -> Se utiliza para introducir un email
+        -number -> Se utiliza para para valores númericos 
+        password -> Se utiliza para contraseñas
+        -range -> Se utiliza para establecer un rango
+        -reset -> Se utiliza para resetear un formulario
+        -search -> Se utiliza para las barras de búsqueda
+        -tel -> Se utiliza para introducir números telefónicos
+        -text -> Valor por defecto
+        -url -> Se utiliza para introducir urls
+        week -> Se utiliza para introducir el número de semanas del año.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+
+    <h2>Estructura basica de un formulario</h2>
+     <form> <!--<form action=""> esta es la formapor defecto, el action es a donde va a enviar la informacion, se escribe entre comillas "la ruta de donde se va a guardar" (un servidor)-->
+        <label>nombre</label> 
+        <input>
+        <button>Enviar formularío</button>
+    </form>
+    
+    <h3>Asociar el label con el input</h3>
+    <form action="#">
+        <label for="name">apellido</label>
+        <input id="name">
+        <button>Enviar</button>
+    </form>
+
+    <h2>Input type (tipos de input)</h2>
+
+    <h3>button</h3>
+    <p>button -> Se comporta igual que un botón button. 
+        <br>
+        Este tipo de button no sirve para enviar el formularion a diferencia de una etiqueta button</p>
+    <form>
+        <input type="button">
+    <!-- para hacer que aparesca texto en el voton se utiliza en atributo "value" -->
+        <input type="button" value="Hola">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!-- 
+    Las tablas en HTML sirven para poestrar contenido tabulado.
+    
+    La estructura basica de una tabla se compone de:
+        -table -> Etiqueta que encieera una tabla 
+        -tr -> table row, etiqueta que construye una fila (horizontal)
+        -td -> table data, etiqueta que construlle una celda (las columnas)
+
+    Los titulos de las tablas se establecen con la etiqueta "caption", es una etiqueta opcional, y según la especificación esta etiqueta se coloca justo despues de la etiqueta table.
+    
+    Las cabeceras de las tablas se establecen con la etiqueta "thead".
+    Dentro tenemos una etiqueta tr normal, pero en el caso de las celdas, la establecemos con la etiqueta th en lugar de tb
+    
+    El contenido de la tabla debe ir dentro de una etiqueta "tbody" para representar el cuerpo de la tabla.
+    
+    De forma opcional podemos colocar un "tfoot" a la tabla para establecer un pie de tabla. 
+
+    Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos:
+        rowspan -> Sirve para que una celda ocupe mas de una fila, por defecto es uno.
+        colspan -> Sirve para que una celda ocupe mas de una columna, el valor por defecto es uno.
+        (ojo: si usas uno de estos atributos asegurate que el espacio que quieres ocupar este libre, sino se ropera la tabla)
+    
+    Cuando necesitamos seleccionar una columna, tenemos la etiqueta "colgroup", que sirve para seleccionar una columna en concreto. Dentro pondremos tantas eliquetas col como columnas tengamos, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tiene la tabla.
+    
+    Si necesiamos que una etiqueta col agrupe más de una columna, tenemos el atributo "span", que funciona exactamente igual que rowapan y colspan. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+
+    <!-- CSS para dar estilo a la tabla -->
+    <style>
+        table{
+            font-family: sans-serif;
+            /* borde */
+            border: 2px solid grey; 
+            /* centrar texto */
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+        caption{
+            /* agrandar (supongo) */
+            font-size: 2rem;
+            /* negrita del titulo */
+            font-weight: bold;
+            margin-bottom: auto;
+        }
+        th,
+        td{
+            border: 2px solid gray;
+            padding:unset;
+        }
+
+        tr:nth-child(8) td:nth-child(2){
+            background-color: lightblue;
+        }
+
+        td:first-child,
+        th,
+        tfoot{
+            background-color: lightgreen;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Tablas</h1>
+
+    <table>
+        <caption>HORARIO DE CLASES</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>12:00 - 13:00</td>
+                <td rowspan="2">Interconexión de redes</td>
+                <td rowspan="2">Interconexión de redes</td>
+                <td rowspan="2">Metodología</td>
+                <td rowspan="2">Metodología</td>
+                <td>Metodología</td>
+            </tr>
+            <tr>
+                <td>13:00 - 14:00</td>
+                <td rowspan="2">Base de datos</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td>Introducción al Diseño digital</td>
+                <td rowspan="2">Introducción al Diseño digital</td>
+                <td>Base de datos</td>
+                <td rowspan="2">Interconexión de redes</td>
+               
+            </tr>
+            <tr>
+                <td>15:00 - 16:00</td>
+                <td rowspan="2">Programación orientada a objetos</td>
+                <td>Base de datos</td>
+                <td rowspan="2">Formación sociocultural ll</td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                
+                <td rowspan="2">Programación orientada a objetos</td>
+                <td rowspan="2">Programación orientada a objetos</td>
+                <td>Formación sociocultural ll</td>
+                
+            </tr>
+            <tr>
+                <td>17:00 - 18:00</td>
+                <td>Funciones Matemáticas</td>
+                <td>Funciones Matemáticas</td>
+                <td rowspan="2">Funciones Matemáticas</td>
+            </tr>
+            <tr>
+                <td>18:00 - 19:00</td>
+                <td>Inglés</td>
+                <td>Inglés</td>
+                <td>Inglés</td>
+                <td>Inglés</td>
+            </tr>
+            <tr>
+                <td>19:00 - 20:00</td>
+                <td colspan="5">Libre soy, libre soy</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Tegnologías de la Información</td>
+                <td>Enero-Abril 2021</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
